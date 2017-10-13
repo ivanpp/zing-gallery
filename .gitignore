@@ -6,8 +6,10 @@
 */.DS_Store
 .sass-cache
 .tmp_*
+/tmp
 /docs
 /docs/*
-/tmp/*
+/tmp*/*
 node_modules
 npm-debug.log
+/resources/

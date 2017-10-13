@@ -1,4 +1,4 @@
-var PhotoSwipe = require('./photoSwipe/photoswipe.min')
+var PhotoSwipe = require('./photoSwipe/photoswipe')
 var PhotoSwipeUI_Default = require('./photoSwipe/photoswipe-ui-default')
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
@@ -6,7 +6,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
   // parse slide data (url, title, size ...) from DOM elements 
   // (children of gallerySelector)
   var parseThumbnailElements = function(el) {
-    var thumbElements = el.getElementsByClassName('thumb'),
+    var thumbElements = el.getElementsByClassName('js-thumb'),
       numNodes = thumbElements.length,
       items = [],
       figureEl,
@@ -242,7 +242,6 @@ var initSecretAlbum = function(albumSlt) {
   $btn.addEventListener('click', function(e) {
     $dialog.style.display = 'none';
     $overlay.style.display = 'none';
-    console.log($btn)
     // $btn.submit();
     // window.location.href = (baseUrl + '?password=' + $input.value);
   })
